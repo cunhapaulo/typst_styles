@@ -13,7 +13,11 @@ Hugs.
 ## Present Available Styles
 
 ### Monography
-![Monography Style Template](/monography/main.pdf)
+![](examples/monography/main.pdf)
+![](https://github.com/cunhapaulo/typst_styles/assets/28146759/de54ae07-cd33-4761-9eaa-658d6ec27a36)
 
 ### Paper
-![](https://github.com/cunhapaulo/typst_styles/blob/main/paper/main.pdf)
+![](examples/paper/main.pdf)
+![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/b08e3311-0bb4-4fb4-ad5d-65e7c75fb927)
+
+
