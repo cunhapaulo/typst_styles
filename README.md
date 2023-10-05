@@ -35,13 +35,18 @@ Prost!
 ## Present Available Styles
 
 ### Monography
-![](examples/monography/main.pdf)
+You may access this template as a eadonly version direct in Typst cloud through the link below:
+- [Direct link to read only document](https://typst.app/project/rpNyqa1B-xy56OoZsWupCa)
+
 ![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/baa37d35-3b0c-4e0d-b846-44778fc49255)
 
 
 
 ### Paper
-![](examples/paper/main.pdf)
+
+You may access this template as a eadonly version direct in Typst cloud through the link below:
+- [Direct link to read only document](https://typst.app/project/rxl522IfvNXxh6icz-_BJw)
+
 ![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/b08e3311-0bb4-4fb4-ad5d-65e7c75fb927)
 
 
