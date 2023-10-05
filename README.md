@@ -1,4 +1,4 @@
-# Typst_Styles
+# Typst Themes - `typst_styles`
 
 Hello, there. 
 
@@ -13,6 +13,7 @@ Hugs.
 ## Present Available Styles
 
 ### Monography
+![Monography Style Template](/monography/main.pdf)
 
 ### Paper
-
+![](https://github.com/cunhapaulo/typst_styles/blob/main/paper/main.pdf)
