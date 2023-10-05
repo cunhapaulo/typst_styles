@@ -14,7 +14,8 @@ Hugs.
 
 ### Monography
 ![](examples/monography/main.pdf)
-![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/ab526386-9b14-4f60-9076-81f1a6dfff51)
+![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/baa37d35-3b0c-4e0d-b846-44778fc49255)
+
 
 
 ### Paper
