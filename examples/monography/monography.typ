@@ -1,7 +1,6 @@
 //====================================================================
 // The project function defines how your document looks.
 // It takes your content and some metadata and formats it.
-// Go ahead and customize it to your liking!
 //====================================================================
 
 #let project(
@@ -45,6 +44,7 @@
 
   let sumario = "Trabalho apresentado à disciplina " + discipline + ", ministrada pelo " + professor + ", pelo(s) aluno(s) " + for a in authors [ #a.name, matrícula #a.mat, ] + " como tarefa avaliativa do Curso de "+ course +"  da " + university +  " (" + upper(sigla) + ")."
 
+  
   
 // ---------------------------------------------------------------
 //  Configure lists.
@@ -190,7 +190,7 @@ block(height:100%, width: 100%)[
     // TITLE
     #block(
       text(upper[#title], weight: 600, body_fontsize+2pt, hyphenate: false) + 
-      text(upper[: #subtitle], body_fontsize+2pt,hyphenate: false)
+      text(upper[#subtitle], body_fontsize+2pt,hyphenate: false)
     )
         
     #v(55%, weak: true)
@@ -225,7 +225,7 @@ block(height:100%, width: 100%)[
       // TITLE
       #block(
         text(upper[#title], weight: 600, body_fontsize, hyphenate: false) +
-        text(upper[: #subtitle], body_fontsize, hyphenate: false)
+        text(upper[#subtitle], body_fontsize, hyphenate: false)
       )
     ]
   
@@ -292,4 +292,64 @@ block()[
   pagebreak()
   
   body
+}  
+
+// END OF PROJECT
+
+
+
+// ---------------------------------------------------------------
+//  Useful Procedures.
+// ---------------------------------------------------------------
+  
+#let highlightBox(title: none, fontsize: 9pt, leading: 6.75pt, color: none, radius: 4pt, alignment: left, width: auto, body) = {
+  
+  let strokeColor = luma(70)
+  let backgroundColor = white
+  let inset_size = 8pt
+
+  if color == "red" {
+    strokeColor = rgb(237, 32, 84)
+    backgroundColor = rgb(253, 228, 224)
+  } else if color == "green" {
+    strokeColor = rgb(102, 174, 62)
+    backgroundColor = rgb(235, 244, 222)
+  } else if color == "blue" {
+    strokeColor = rgb(29, 144, 208)
+    backgroundColor = rgb(232, 246, 253)
+  } else if color == "gray" {
+    strokeColor = rgb(150, 150, 150)
+    backgroundColor = rgb(230, 230, 230)
+  }
+  
+  return block(above: 17pt, below: 17pt)[
+  #box(
+    fill: backgroundColor,
+    stroke: 0pt + strokeColor,
+    radius: radius,
+    width: width
+  )[
+    #if title == none {
+      inset_size = 0pt
+    }
+    #set align(alignment)
+    #block(
+      fill: strokeColor, 
+      inset: inset_size,
+      radius: (top-left: radius, bottom-right: radius),
+    )[
+      #text(fill: white, weight: "bold")[#title]
+    ]
+    #block(
+      breakable: true,
+      spacing: 17pt,
+      width: 100%,
+      inset: (x: 20pt, bottom: 20pt)
+    )[
+      #par(leading: leading)[
+      #text(size: fontsize)[#body]
+    ]
+    ]
+  ]
+]
 }

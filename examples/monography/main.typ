@@ -10,7 +10,7 @@
   faculty:    "Faculdade de Filosofia",  
   course:     "Bacharelado em Filosofia",  
   title:      "Modernismo e Pós-Modernismo",
-  subtitle:   "Comentários sobre os Tópicos segundo Michael Peters",
+  subtitle:   ": Comentários sobre os Dois Tópicos segundo Michael Peters",
   discipline: "Tópicos de Filosofia Contemporânea",
   professor:  "Prof. Dr. Roberto de Almeida Pereira de Barros",
   citystate:  "Belém - PA",
@@ -32,7 +32,8 @@
   
 #set cite(style: "chicago-author-date")
 
-= Introdução ao tema
+
+= Introdução
 #lorem(100)
 
 = Modernismo e Pós-modernismo na Filosofia
@@ -50,6 +51,9 @@
 
 == Modernismo na filosofia
 #lorem(140) #footnote(lorem(30)) @Peters2000
+
+#highlightBox(color: "gray", lorem(40))
+
 
 == Pós-modernismo na filosofia
 #lorem(103) #footnote(lorem(40))
