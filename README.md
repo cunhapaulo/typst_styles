@@ -10,6 +10,7 @@ I´d be thankful if you could share your experience, needs and improvements with
 
 Hugs.
 
+Try Typst and save time when writing papers, homework, and more. Sign up at https://typst.app
 
 ## Present Available Styles
 
