@@ -26,39 +26,66 @@
   body,
  
 ) = {
-  // Set the document's basic properties.
+
+
+
+//==========================================================================
+//                             IMPORTANT!!!
+//                          GLOBAL DEFINITIONS
+//==========================================================================
+
+
+  let doc_language         = "pt"
+  let page_size             = "a4" 
+
+  let abstract_fontsize     = 10pt
+  let heading_style         = "1.1"
+
+  let body_fontsize         = 12pt   
+  let body_firstlineindent  = 10mm
+  let body_interlinespace   = 0.6em
+  let body_paragraphspacing = body_interlinespace
+  let body_hyphenate        = true
+  let body_fonttype         = "STIX Two Text"
+                            // "STIX Two Text", "TeX Gyre Pagella", "Liberation Serif", "Fira Sans", "Libre Baskerville", "New Computer Modern", "TeX Gyre Termes", "Atkinson Hyperlegible", "STIX Two Text", "Linux Libertine", "Inria Serif", "Source Sans Pro"
+
+
+  
+//==========================================================================
+// Set the document's basic properties.
+//==========================================================================
+
   set document(author: authors.map(a => a.name), title: title)
+
   set page(
+    paper: page_size,
     margin: (left: 30mm, right: 30mm, top: 30mm, bottom: 30mm),
-    numbering: "1/1",
-    number-align: center,
+    numbering: "1",
+    number-align: center // top + right,
   )
-  // set text(size: 11pt,font: "Liberation Serif", lang: "pt")
-  // set text(size: 11pt,font: "Fira Sans", lang: "pt")
-  // set text(size: 11pt,font: "Libre Baskerville", lang: "pt")
-  // set text(size: 10pt,font: "New Computer Modern", lang: "pt")
-  // set text(size: 11pt,font: "TeX Gyre Termes", lang: "pt")
-  set text(size: 11pt,font: "TeX Gyre Pagella", lang: "en")
-  set heading(numbering: "1.1")
+
+  set text(size: 12pt, font: body_fonttype, lang: doc_language)
+
+  set heading(numbering: heading_style)
 
   //=======================
   // Title row.
   //=======================
-  align(center)[
 
+  align(center)[
     #block(text(weight: 600, 1.75em, title + subtitle))
     #v(2em, weak: true)
     #date
-
   ]
 
   //=======================
   // Author information.
   //=======================
+
   set par(justify: true, leading: 5.0pt)
   pad(
     top: 0.75em,
-    bottom: 0.75em,
+    bottom: 0.75em, 
     x: 2em,
     grid(
       columns: (1fr,) * calc.min(3, authors.len()),
@@ -67,7 +94,7 @@
       ..authors.map(author => align(center)[
         *#author.name* \
         #author.affiliation\
-        #text(font: "New Computer Modern Mono" ,author.email)
+        #text(size: body_fontsize - 3pt ,font: "Lucida Sans Typewriter", author.email)
       ]),      
     ),
   )
@@ -75,24 +102,32 @@
   //=======================
   // Abstract
   //=======================
-  heading(outlined: false, numbering: none, text(10pt, "Resumo:"))
-  set par(justify: true, leading: 4.0pt)
-  set text(size: 9pt)
-  abstract
-  
+
+  block[
+    #set par(justify: true, leading: 3.26pt)
+    #set text(size: abstract_fontsize)
+    #text(weight: 900, "Resumo: ") #abstract
+  ]
+
+
   //=======================
   // Keywords
   //=======================
-  set text(size: 10pt)
-  heading(outlined: false, numbering: none, text(10pt, "Palavras-chave:"))
-  set text(size: 9pt) 
-  keywords
+
+  block[
+    #set par(justify: false, leading: 3.26pt)
+    #set text(size: abstract_fontsize)
+    #text(weight: 900, "Palavras-chave: ") #keywords
+  ]
+
   v(1%)
   
   //=======================
   // Main body. 
   //=======================
-  set par(justify: true, first-line-indent: 1.0cm, leading: 7.8pt, linebreaks: "simple")
-  set text(size: 12pt)
+  set par(justify: true, first-line-indent: 1.0cm, leading: body_interlinespace, linebreaks: "simple")
+  set text(size: body_fontsize)
+
+  show heading: set block(above: 1.4em, below: 0.8em)
   body
 }

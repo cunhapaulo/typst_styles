@@ -32,7 +32,7 @@
 //                          GLOBAL DEFINITIONS
 //==========================================================================
 
-  let text_language         = "pt"
+  let doc_language         = "pt"
   let page_size             = "a4"
 
   let abstract_hyphenate    = true
@@ -41,7 +41,7 @@
   let summary_depth         = 2  
   let summary_fontsize      = 12pt
 
-  let heading_style         = "1.a"
+  let heading_style         = "1.1"
   let heading_spaceabove    = 1.4em
   let heading_spacebelow    = 0.8em 
   
@@ -80,60 +80,15 @@
   )
   
   set text(
-    lang: text_language,
+    lang: doc_language,
     size: body_fontsize,
     font: body_fonttype, 
   )
   show par: set block(spacing: body_paragraphspacing)
+
 // ---------------------------------------------------------------
 // Configure headings
 // ---------------------------------------------------------------
-    
-  // show heading: it => locate(loc => {
-  //   // Find out the final number of the heading counter.
-  //   let levels = counter(heading).at(loc)
-  //   let deepest = if levels != () {
-  //     levels.last()
-  //   } else {
-  //     1
-  //   }  
-
-  // if it.level == 1 [
-  //     #v(12pt, weak: true)
-  //     #numbering("1")
-  //     #set par(first-line-indent: 0pt)
-  //     #h(10pt, weak: true)
-  //     #it.body
-  //     #v(13.75pt, weak: true)
-  //   ] 
-  //   else if it.level == 2 [
-  //     #v(18pt, weak: true)
-  //     #set par(first-line-indent: 0pt)
-  //     #numbering("1.1", deepest)
-  //     #h(10pt, weak: true)
-  //     #it.body
-  //     #v(10pt, weak: true)
-  //   ] else if it.level == 3 [
-  //     // Third level headings are run-ins too, but different.
-  //     #v(16pt, weak: true)
-  //     #set par(first-line-indent: 0pt)
-  //     #numbering("1.1.1", deepest)
-  //     #h(10pt, weak: true)
-  //     #it.body
-  //     #v(10pt, weak: true)
-  //   ]
-  // })
-
-
-// show heading.where( level: 1 ): it => block(width: 100%)[
-  
-//   #v(6pt) 
-//   #let c = counter(heading).display();
-//   #if ( c  != "0" ) [ #c ]
-//   #h(6pt) 
-//   #it.body 
-//   #v(6pt)
-// ]
 
 show heading.where( level: 1): set block(above: heading_spaceabove, below: heading_spacebelow)
 
