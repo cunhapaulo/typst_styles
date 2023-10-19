@@ -10,6 +10,8 @@ I´d be thankful if you could share your experience, needs and improvements with
 
 Hugs.
 
+![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/f796c056-4cfc-4cb4-820f-ca7f831d6391)
+
 Try Typst and save time when writing papers, homework, and more. Sign up at https://typst.app
 
 ## Present Available Styles
