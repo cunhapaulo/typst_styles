@@ -29,6 +29,8 @@ You may access this template as a eadonly version direct in Typst cloud through 
 You may access this template as a eadonly version direct in Typst cloud through the link below:
 - [Direct link to read only document](https://typst.app/project/rxl522IfvNXxh6icz-_BJw)
 
-![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/b08e3311-0bb4-4fb4-ad5d-65e7c75fb927)
+![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/0f3d1b0f-1dcc-432f-933d-7657730c2dc7)
+
+
 
 
