@@ -18,7 +18,7 @@ Try Typst and save time when writing papers, homework, and more. Sign up at http
 
 ### Monography
 You may access this template as a eadonly version direct in Typst cloud through the link below:
-- [Direct link to the read only document file](https://typst.app/project/rpNyqa1B-xy56OoZsWupCa)
+- [Direct link to the read-only example document in the Typst cloud.](https://typst.app/project/rpNyqa1B-xy56OoZsWupCa)
 
 ![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/97ee3d51-e570-40ab-969e-be507b5853e1)
 
@@ -28,7 +28,7 @@ You may access this template as a eadonly version direct in Typst cloud through 
 ### Paper
 
 You may access this template as a eadonly version direct in Typst cloud through the link below:
-- [Direct link to read only document](https://typst.app/project/rxl522IfvNXxh6icz-_BJw)
+- [Direct link to the read-only example document in the Typst cloud.](https://typst.app/project/rGFsAn7O-cgwauApoONm5u)
 
 ![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/0f3d1b0f-1dcc-432f-933d-7657730c2dc7)
 
