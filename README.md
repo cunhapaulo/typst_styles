@@ -20,7 +20,8 @@ Try Typst and save time when writing papers, homework, and more. Sign up at http
 You may access this template as a eadonly version direct in Typst cloud through the link below:
 - [Direct link to the read only document file](https://typst.app/project/rpNyqa1B-xy56OoZsWupCa)
 
-![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/baa37d35-3b0c-4e0d-b846-44778fc49255)
+![image](https://github.com/cunhapaulo/typst_styles/assets/28146759/97ee3d51-e570-40ab-969e-be507b5853e1)
+
 
 
 
