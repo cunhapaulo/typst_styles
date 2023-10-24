@@ -1,5 +1,6 @@
 #import "toolbox.typ": *
 
+
 //====================================================================
 // The project function defines how your document looks.
 // It takes your content and some metadata and formats it.
@@ -32,26 +33,32 @@
 //                          GLOBAL DEFINITIONS
 //==========================================================================
 
-  let doc_language         = "pt"
+  let text_language         = "pt"
+
   let page_size             = "a4"
 
   let abstract_hyphenate    = true
-  let logo                  = "ufpa.png"
+  let logo                  = "../img/ufpa.png"
+
   
   let summary_depth         = 2  
   let summary_fontsize      = 12pt
 
   let heading_style         = "1.1"
-  let heading_spaceabove    = 1.4em
-  let heading_spacebelow    = 0.8em 
+
+  let heading_spaceabove    = 1.5em
+  let heading_spacebelow    = 0.78em 
+
   
   let body_fontsize         = 12pt   
   let body_firstlineindent  = 10mm
   let body_interlinespace   = 10pt // 0.78em
   let body_paragraphspacing = body_interlinespace
   let body_hyphenate        = true
-  let body_fonttype         = "STIX Two Text"
-                            // "STIX Two Text", "TeX Gyre Pagella", "Liberation Serif", "Fira Sans", "Libre Baskerville", "New Computer Modern", "TeX Gyre Termes", "Atkinson Hyperlegible", "STIX Two Text", "Linux Libertine", "Inria Serif", "Source Sans Pro"
+  let body_fonttype         = "Palatino Linotype" //"STIX Two Text"
+  
+                            // "STIX Two Text", "TeX Gyre Pagella", "Liberation Serif", "Fira Sans", "Libre Baskerville", "New Computer Modern", "TeX Gyre Termes", "Atkinson Hyperlegible", "STIX Two Text", "Linux Libertine", "Inria Serif", "Source Sans Pro", "Palatino", "Palatino Linotype"
+
 
   let sumario = "Trabalho apresentado à disciplina " + discipline + ", ministrada pelo " + professor + ", pelo(s) aluno(s) " + for a in authors [ #a.name, matrícula #a.mat, ] + " como tarefa avaliativa do Curso de "+ course +"  da " + university +  " (" + upper(sigla) + ")."
 
@@ -80,15 +87,69 @@
   )
   
   set text(
-    lang: doc_language,
+    lang: text_language,
     size: body_fontsize,
     font: body_fonttype, 
   )
+  
   show par: set block(spacing: body_paragraphspacing)
+  
+  // Defines separation character to be used in the cation of all elements.
+  show figure.where(
+      // kind: image,
+      ): set figure.caption(position: top, separator: [ -- ])
+
+  
 
 // ---------------------------------------------------------------
 // Configure headings
 // ---------------------------------------------------------------
+    
+  // show heading: it => locate(loc => {
+  //   // Find out the final number of the heading counter.
+  //   let levels = counter(heading).at(loc)
+  //   let deepest = if levels != () {
+  //     levels.last()
+  //   } else {
+  //     1
+  //   }  
+
+  // if it.level == 1 [
+  //     #v(12pt, weak: true)
+  //     #numbering("1")
+  //     #set par(first-line-indent: 0pt)
+  //     #h(10pt, weak: true)
+  //     #it.body
+  //     #v(13.75pt, weak: true)
+  //   ] 
+  //   else if it.level == 2 [
+  //     #v(18pt, weak: true)
+  //     #set par(first-line-indent: 0pt)
+  //     #numbering("1.1", deepest)
+  //     #h(10pt, weak: true)
+  //     #it.body
+  //     #v(10pt, weak: true)
+  //   ] else if it.level == 3 [
+  //     // Third level headings are run-ins too, but different.
+  //     #v(16pt, weak: true)
+  //     #set par(first-line-indent: 0pt)
+  //     #numbering("1.1.1", deepest)
+  //     #h(10pt, weak: true)
+  //     #it.body
+  //     #v(10pt, weak: true)
+  //   ]
+  // })
+
+
+// show heading.where( level: 1 ): it => block(width: 100%)[
+  
+//   #v(6pt) 
+//   #let c = counter(heading).display();
+//   #if ( c  != "0" ) [ #c ]
+//   #h(6pt) 
+//   #it.body 
+//   #v(6pt)
+// ]
 
 show heading.where( level: 1): set block(above: heading_spaceabove, below: heading_spacebelow)
 
@@ -131,7 +192,7 @@ block(height:100%, width: 100%)[
 
   // LOGO
   #block()[
-  #figure(image(logo, width: 20%),)
+  #image(logo, width: 20%)
   #set text(size: body_fontsize)  
   #upper[
       #university\
@@ -265,6 +326,7 @@ block()[
   pagebreak()
 
   
+
   body
 }  
 

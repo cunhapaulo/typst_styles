@@ -53,3 +53,32 @@
   ]
 ]
 }
+
+
+#let myfigure(name, width: 50%, caption: "", source: "") = {
+
+
+  return block(above: 25pt, below: 25pt, width: 100%)[
+    #figure(
+      image(name, width: width),
+      gap: 10pt, 
+      caption: caption
+    )
+    #set align(center)
+
+    #if source != "" {
+      "Fonte: " + source
+    }
+  ]  
+}
+
+#let mytable(name, width: 50%, caption: "") = {
+
+  return block(above: 25pt, below: 25pt, width: 100%)[
+    #figure(
+      image(name, width: width),
+      gap: 10pt, 
+      caption: caption
+    )
+  ]  
+}
