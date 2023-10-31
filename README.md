@@ -1,7 +1,6 @@
 # Just released (31.oct.2023) - ABNT ready
 
-This time it is for real. Both templates are in comply with ABNT, including bibliography and references.
-
+This time it is for real. Both templates are in compliance with ABNT, including bibliography and references.
 
 # Typst Themes - `typst_styles`
 
