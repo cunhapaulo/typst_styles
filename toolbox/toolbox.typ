@@ -54,7 +54,6 @@
 ]
 }
 
-
 #let myfigure(name, width: 50%, caption: "", source: "") = {
 
 
@@ -81,4 +80,20 @@
       caption: caption
     )
   ]  
+}
+
+#let citeonline(reference, supplement: "") = {
+
+  if supplement != "" {
+    return cite(reference, supplement: supplement, form: "prose");
+  } else {
+    return cite(reference, form: "prose");
+  }
+  
+}
+
+
+#let footciteref(reference) = {
+
+  return cite(reference, form: "full");
 }

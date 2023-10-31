@@ -34,15 +34,22 @@
 
 
 = Introdução
-#lorem(100) #footnote(lorem(30)) @Peters2000
+#lorem(40) #footnote[#footciteref(<Peters2000>)]  
 
 
 = Modernismo e Pós-modernismo na Filosofia
-#lorem(100)
+#lorem(30) @Peters2000[p.105]
 
 == Modernismo nas artes
 
-#lorem(130)
+#lorem(20) 
+
+Eaxample use of citation:  
+
+1. #citeonline(<Lyotard2009>, supplement: "p.97");
+2. #citeonline(<Lyotard2009>);
+3. #cite(<Peters2000>, supplement: "p.45")
+4. @Peters2000[p. 245]
 
 #lorem(30)
 
@@ -65,11 +72,12 @@
 #highlightBox(color: "gray", lorem(40))
 
 == Pós-modernismo na filosofia
-#lorem(103)
+#lorem(10)
 
-=== O Pós-modernismo e outros movimentos 
+=== O Pós-modernismo e outros movimentos associados
 #lorem(80)
 
-#bibliography("./bib/refs.bib")
-
-
+// Bibliography section
+#set par(first-line-indent: 0mm, hanging-indent: 8mm) // format tweak
+// #bibliography("./references/refs.bib", style: "associacao-brasileira-de-normas-tecnicas")
+#bibliography("./references/refs.bib", style: "./references/abnt.csl")
