@@ -54,12 +54,12 @@
 ]
 }
 
-#let myfigure(name, width: 50%, caption: "", source: "") = {
+#let myfigure(body, width: 50%, caption: "", source: "") = {
 
 
   return block(above: 25pt, below: 25pt, width: 100%)[
     #figure(
-      image(name, width: width),
+      image(body, width: width),
       gap: 10pt, 
       caption: caption
     )
@@ -71,29 +71,27 @@
   ]  
 }
 
-#let mytable(name, width: 50%, caption: "") = {
+#let mytable(body, width: 50%, caption: "") = {
 
   return block(above: 25pt, below: 25pt, width: 100%)[
     #figure(
-      image(name, width: width),
+      image(body, width: width),
       gap: 10pt, 
       caption: caption
     )
   ]  
 }
 
-#let citeonline(reference, supplement: "") = {
+#let citeonline(body, supplement: "") = {
 
   if supplement != "" {
-    return cite(reference, supplement: supplement, form: "prose");
+    return cite(body, supplement: supplement, form: "prose");
   } else {
-    return cite(reference, form: "prose");
+    return cite(body, form: "prose");
   }
   
 }
 
-
-#let footciteref(reference) = {
-
-  return cite(reference, form: "full");
-}
+#let footciteref(body, supplement: "") = {
+   cite(body, form: "full")
+} 

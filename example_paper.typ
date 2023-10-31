@@ -19,8 +19,7 @@
     ),
   ),
 )
-
-
+ 
 #set cite(style: "chicago-author-date")
 
 = Introduction 
@@ -28,7 +27,7 @@
 
 #lorem(30)
 
-= Modernism and Post-Modernism in History
+= Modernism and Post-Modernism 
 #lorem(40)  
 
 #myfigure("../img/finishline.jpg", 
