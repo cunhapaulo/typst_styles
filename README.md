@@ -14,6 +14,10 @@ Hugs.
 
 Try Typst and save time when writing papers, homework, and more. Sign up at https://typst.app
 
+## Just released (31.oct.2023) - ABNT ready
+
+This time it is for real. Both templates are in comply with ABNT, including bibliography and references.
+
 ## Present Available Styles
 
 ### Monography
