@@ -2,7 +2,7 @@
 
 #show: project.with(
   
-  title:            "Paper´s Main Title",
+  title:            "Main Title of this Paper",
   subtitle:         ": "+"Optional Paper´s Subtitle", 
   date:             "Date of publishing",
   abstract:         lorem(70),
@@ -53,7 +53,7 @@
 #lorem(45) #footnote[#lorem(30)] 
  
 == Modernism in Philosophy
-#lorem(25) Citation #citeonline(<Lyotard2009>)
+#lorem(25) Citation #citeonline(<Lyotard2009>) 
 
 #lorem(125) 
  
@@ -62,14 +62,11 @@
 
 Eaxample uses of citation:  
 
-1. #citeonline(<Lyotard2009>, supplement: "p. 97");
-2. #citeonline(<Lyotard2009>);
+1. #citeonline(<Lyotard2009>, supplement: "p. 97")
+2. #citeonline(<Lyotard2009>)
 3. #cite(<Peters2000>, supplement: "p. 245")
 4. @Peters2000[p. 45]
-
-
+ 
 // Bibliography section
 #set par(first-line-indent: 0mm, hanging-indent: 8mm) // format tweak
-// #bibliography("./bib/refs.bib", style: "associacao-brasileira-de-normas-tecnicas")
 #bibliography("./references/refs.bib", style: "./references/abnt.csl")
- 

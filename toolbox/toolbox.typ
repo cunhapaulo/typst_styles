@@ -56,7 +56,6 @@
 
 #let myfigure(body, width: 50%, caption: "", source: "") = {
 
-
   return block(above: 25pt, below: 25pt, width: 100%)[
     #figure(
       image(body, width: width),
@@ -82,6 +81,17 @@
   ]  
 }
 
+//-----------------------------------------------
+//  citeonline(reference, supplement)
+//
+//    Created to mimimc the exact behaviour of 
+//    LaTeX citeonline refence command.
+//  Produces:
+//    a. citeonline(<Knuth1986>, supplement: "p. 123") 
+//       => Knuth (1986, p. 123)
+//    b. citeonline(<Knuth1986>) 
+//       => Knuth (1986)
+//-----------------------------------------------
 #let citeonline(body, supplement: "") = {
 
   if supplement != "" {
@@ -92,6 +102,17 @@
   
 }
 
-#let footciteref(body, supplement: "") = {
+
+//-----------------------------------------------
+//  footciteref(reference)
+//
+//    Created to mimic the exac behaviour of
+//    LaTex homonimous reference command.
+//  Produces:
+//    a. #footnote[#footciteref(<reference>)]
+//       produces a footnote where the complete reference
+//       is put.
+//----------------------------------------------
+#let footciteref(body) = {
    cite(body, form: "full")
 } 

@@ -46,10 +46,10 @@
 
 Eaxample use of citation:  
 
-1. #citeonline(<Lyotard2009>, supplement: "p.97");
-2. #citeonline(<Lyotard2009>);
-3. #cite(<Peters2000>, supplement: "p.45")
-4. @Peters2000[p. 245]
+1. @Peters2000[p. 5]
+2. #cite(<Peters2000>, supplement: "p.45");
+3. #citeonline(<Lyotard2009>);
+4. #citeonline(<Lyotard2009>, supplement: "p.97");
 
 #lorem(30)
 
@@ -79,5 +79,4 @@ Eaxample use of citation:
 
 // Bibliography section
 #set par(first-line-indent: 0mm, hanging-indent: 8mm) // format tweak
-// #bibliography("./references/refs.bib", style: "associacao-brasileira-de-normas-tecnicas")
 #bibliography("./references/refs.bib", style: "./references/abnt.csl")
