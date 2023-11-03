@@ -69,7 +69,7 @@ Eaxample use of citation:
 == Modernismo na filosofia
 #lorem(140)
 
-#highlightBox(color: "gray", lorem(40))
+#highlightBox(lorem(40), color: "gray")
 
 == Pós-modernismo na filosofia
 #lorem(10)
