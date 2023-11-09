@@ -167,4 +167,25 @@
 //------------------------------------------------------------------
 #let footciteref(body) = {
    cite(body, form: "full")
-} 
+}
+
+
+//------------------------------------------------------------------
+//  section()
+//------------------------------------------------------------------
+//
+//    Createa header without numbering, just like in LaTeX
+//    \section*{Text}
+//  Produces:
+//    Text (without numbering).
+//
+//    #header(numbering: none)[Title goes here]
+//
+//------------------------------------------------------------------
+// #let section(arg: "") = {
+//   heading(numbering: none, arg)
+// }
+
+#let section_ = heading.with(level:1, numbering: none)
+#let subsection_ = heading.with(level: 2, numbering: none)
+#let subsubsection_ = heading.with(level: 3, numbering: none)

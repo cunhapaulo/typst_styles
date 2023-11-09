@@ -27,13 +27,14 @@
     // ( name: "", affiliation: "", mat: "", ),
   ),
 
-)  
+)   
 
 
 #set cite(style: "chicago-author-date")
 
 
-= Introdução
+#section_[Introdução] 
+
 #lorem(40) #footnote[#footciteref(<Peters2000>)]  
 
 

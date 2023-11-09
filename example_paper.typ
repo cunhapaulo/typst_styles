@@ -22,7 +22,8 @@
  
 #set cite(style: "chicago-author-date")
 
-= Introduction 
+#section_[Introduction]
+
 #lorem(30) #footnote[#footciteref(<Peters2000>)]
 
 #lorem(30)

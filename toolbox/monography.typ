@@ -32,30 +32,27 @@
 //                             IMPORTANT!!!
 //                          GLOBAL DEFINITIONS
 //==========================================================================
+  let PAGE_SIZE             = "a4"
+  let TEXT_LANGUAGE         = "pt"
 
-  let text_language         = "pt"
+  let ABSTRACT_HYPHENATE    = true
+  let LOGO_PATH             = "../img/ufpa.png"
+  
+  let SUMMARY_DEPTH         = 2  
+  let SUMMARY_FONTSIZE      = 12pt
 
-  let page_size             = "a4"
+  let HEADING_STYLE         = "1.1"
 
-  let abstract_hyphenate    = true
-  let logo                  = "../img/ufpa.png"
+  let HEADINGSPACE_ABOVE    = 1.5em
+  let HEADINGSPACE_BELOW    = 0.78em 
 
   
-  let summary_depth         = 2  
-  let summary_fontsize      = 12pt
-
-  let heading_style         = "1.1"
-
-  let heading_spaceabove    = 1.5em
-  let heading_spacebelow    = 0.78em 
-
-  
-  let body_fontsize         = 12pt   
-  let body_firstlineindent  = 10mm
-  let body_interlinespace   = 10pt // 0.78em
-  let body_paragraphspacing = body_interlinespace
-  let body_hyphenate        = true
-  let body_fonttype         = "Palatino Linotype" //"STIX Two Text"
+  let BODY_FONTSIZE         = 12pt   
+  let BODY_FIRSTLINEINDENT  = 10mm
+  let BODY_INTERLINESPACE   = 10pt // 0.78em
+  let BODY_PARAGRAPHSPACING = BODY_INTERLINESPACE
+  let BODY_HYPHENATE        = true
+  let BODY_FONTTYPE         = "Palatino Linotype" //"STIX Two Text"
   
                             // "STIX Two Text", "TeX Gyre Pagella", "Liberation Serif", "Fira Sans", "Libre Baskerville", "New Computer Modern", "TeX Gyre Termes", "Atkinson Hyperlegible", "STIX Two Text", "Linux Libertine", "Inria Serif", "Source Sans Pro", "Palatino", "Palatino Linotype"
 
@@ -82,17 +79,17 @@
   )
   
   set page(
-    paper: page_size,
+    paper: PAGE_SIZE,
     margin: (left: 30mm, right: 30mm, top: 30mm, bottom: 30mm),
   )
   
   set text(
-    lang: text_language,
-    size: body_fontsize,
-    font: body_fonttype, 
+    lang: TEXT_LANGUAGE,
+    size: BODY_FONTSIZE,
+    font: BODY_FONTTYPE, 
   )
   
-  show par: set block(spacing: body_paragraphspacing)
+  show par: set block(spacing: BODY_PARAGRAPHSPACING)
   
   // Defines separation character to be used in the cation of all elements.
   show figure.where(
@@ -151,9 +148,10 @@
 //   #v(6pt)
 // ]
 
-show heading.where( level: 1): set block(above: heading_spaceabove, below: heading_spacebelow)
+show heading.where( level: 1): set block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW)
 
-show heading.where( level: 2 ): it => block(above: heading_spaceabove, below: heading_spacebelow, width: 100%)[
+
+show heading.where( level: 2 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
   #v(3pt)
   #counter(heading).display() 
   #h(5pt)   
@@ -161,7 +159,7 @@ show heading.where( level: 2 ): it => block(above: heading_spaceabove, below: he
   #v(3pt)
 ]
 
-show heading.where( level: 3 ): it => block(above: heading_spaceabove, below: heading_spacebelow, width: 100%)[
+show heading.where( level: 3 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
   #v(3pt)
   #counter(heading).display() 
   #h(5pt)   
@@ -169,7 +167,7 @@ show heading.where( level: 3 ): it => block(above: heading_spaceabove, below: he
   #v(3pt)
 ]
 
-show heading.where( level: 4 ): it => block(above: heading_spaceabove, below: heading_spacebelow, width: 100%)[
+show heading.where( level: 4 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
   #v(3pt)
   #counter(heading).display() 
   #h(5pt)   
@@ -177,7 +175,7 @@ show heading.where( level: 4 ): it => block(above: heading_spaceabove, below: he
   #v(3pt)
 ]
 
-set heading(numbering: heading_style)
+set heading(numbering: HEADING_STYLE)
 show outline: set heading(numbering: none)
 show bibliography: set heading(numbering: none)
 
@@ -190,10 +188,10 @@ block(height:100%, width: 100%)[
   
  #align(center)[
 
-  // LOGO
+  // LOGO_PATH
   #block()[
-  #image(logo, width: 20%)
-  #set text(size: body_fontsize)  
+  #image(LOGO_PATH, width: 20%)
+  #set text(size: BODY_FONTSIZE)  
   #upper[
       #university\
       #centre\
@@ -219,14 +217,14 @@ block(height:100%, width: 100%)[
 
     // TITLE
     #block(
-      text(upper[#title], weight: 600, body_fontsize+2pt, hyphenate: false) + 
-      text(upper[#subtitle], body_fontsize+2pt,hyphenate: false)
+      text(upper[#title], weight: 600, BODY_FONTSIZE+2pt, hyphenate: false) + 
+      text(upper[#subtitle], BODY_FONTSIZE+2pt,hyphenate: false)
     )
         
     // #v(55%, weak: true)
     #v(1fr)#v(1fr)#v(1fr)#v(1fr)#v(1fr)#v(1fr)
   
-    #set text(size: body_fontsize - 2pt)
+    #set text(size: BODY_FONTSIZE - 2pt)
     #block(text(upper[#citystate]) + linebreak() + text(year))
   ]
 ]
@@ -256,8 +254,8 @@ block(height:100%, width: 100%)[
       
       // TITLE
       #block(
-        text(upper[#title], weight: 600, body_fontsize, hyphenate: false) +
-        text(upper[#subtitle], body_fontsize, hyphenate: false)
+        text(upper[#title], weight: 600, BODY_FONTSIZE, hyphenate: false) +
+        text(upper[#subtitle], BODY_FONTSIZE, hyphenate: false)
       )
     ]
   
@@ -270,7 +268,7 @@ block(height:100%, width: 100%)[
         #block(
           width: 75mm, 
           align(left)[
-            #text(sumario, kerning: true, hyphenate: abstract_hyphenate, size: body_fontsize,)
+            #text(sumario, kerning: true, hyphenate: ABSTRACT_HYPHENATE, size: BODY_FONTSIZE,)
           ]
         )
       ]
@@ -279,7 +277,7 @@ block(height:100%, width: 100%)[
     #v(1fr)#v(1fr)#v(1fr)
   
     #align(center)[  
-    #set text(size: body_fontsize - 2pt)
+    #set text(size: BODY_FONTSIZE - 2pt)
     #block(text(
       upper[#citystate]) + 
       linebreak() + 
@@ -295,10 +293,10 @@ pagebreak()
 // ---------------------------------------------------------------
 
 block()[
-  #set text(size: summary_fontsize, kerning: true,);
+  #set text(size: SUMMARY_FONTSIZE, kerning: true,);
   #par(
     leading: 10pt, 
-    outline(indent: 8mm, depth: summary_depth)
+    outline(indent: 8mm, depth: SUMMARY_DEPTH)
   )
 ]
 
@@ -316,12 +314,12 @@ block()[
   
   set par(
     justify: true, 
-    first-line-indent: body_firstlineindent, 
-    leading: body_interlinespace, 
+    first-line-indent: BODY_FIRSTLINEINDENT, 
+    leading: BODY_INTERLINESPACE, 
     linebreaks: auto,
   )
   
-  set text(size: body_fontsize, kerning: true, hyphenate: body_hyphenate)
+  set text(size: BODY_FONTSIZE, kerning: true, hyphenate: BODY_HYPHENATE)
 
   pagebreak()
 
