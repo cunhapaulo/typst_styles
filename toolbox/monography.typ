@@ -148,32 +148,35 @@
 //   #v(6pt)
 // ]
 
-show heading.where( level: 1): set block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW)
+// show heading.where( level: 1): set block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW)
 
 
-show heading.where( level: 2 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
-  #v(3pt)
-  #counter(heading).display() 
-  #h(5pt)   
-  #it.body
-  #v(3pt)
-]
+// show heading.where( level: 2 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
+//   #counter(heading).display() 
+//   #h(5pt)   
+//   #it.body
+// ]
 
-show heading.where( level: 3 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
-  #v(3pt)
-  #counter(heading).display() 
-  #h(5pt)   
-  #it.body
-  #v(3pt)
-]
+// show heading.where( level: 3 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
+//   #counter(heading).display() 
+//   #h(5pt)   
+//   #it.body
+// ]
 
-show heading.where( level: 4 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
-  #v(3pt)
-  #counter(heading).display() 
-  #h(5pt)   
-  #it.body
-  #v(3pt)
-]
+// show heading.where( level: 4 ): it => block(above: HEADINGSPACE_ABOVE, below: HEADINGSPACE_BELOW, width: 100%)[
+//   #v(3pt)
+//   #counter(heading).display() 
+//   #h(5pt)   
+//   #it.body
+//   #v(1pt)
+// ]
+
+// show heading.where(level: 2).or(heading.where(level: 3)): set block(above: heading-space-above + 3pt, below: heading-space-below + 3pt)
+
+show heading: it => {
+  set block(above: HEADINGSPACE_ABOVE + 3pt, below: HEADINGSPACE_BELOW + 3pt) if it.level >= 1
+  it
+}
 
 set heading(numbering: HEADING_STYLE)
 show outline: set heading(numbering: none)

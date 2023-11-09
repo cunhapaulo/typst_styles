@@ -42,6 +42,7 @@
 #lorem(30) @Peters2000[p.105]
 
 == Modernismo nas artes
+#subsection_[Modernismo nas artes]
 
 #lorem(20) 
 
