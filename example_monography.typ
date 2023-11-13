@@ -19,7 +19,7 @@
   keywords:   [Modernismo; Pós-modernismo; Filosofia contemporânea; Filosofia ocidental.],  
   
   authors: (
-    ( name:         "Paulo Roberto Martins  Cunha", 
+    ( name:         "Paulo Roberto Martins Cunha 2", 
       affiliation:  "Curso de Bacharelado em Filosofia - UFPA",
       email:        "cunha.paulo@gmail.com",
       mat:          "202208040033",
@@ -32,7 +32,7 @@
 
 #set cite(style: "chicago-author-date")
 
-
+// Unnumbered section
 #section_[Introdução] 
 
 #lorem(40) #footnote[#footciteref(<Peters2000>)]  
@@ -42,6 +42,8 @@
 #lorem(30) @Peters2000[p.105]
 
 == Modernismo nas artes
+
+// Unnumbered subsection version
 #subsection_[Modernismo nas artes]
 
 #lorem(20) 
@@ -77,6 +79,8 @@ Eaxample use of citation:
 #lorem(10)
 
 === O Pós-modernismo e outros movimentos associados
+// Unnumbered subsection version
+#subsubsection_[O Pós-modernismo e outros movimentos associados]
 #lorem(80)
 
 // Bibliography section

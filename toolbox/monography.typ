@@ -326,8 +326,6 @@ block()[
 
   pagebreak()
 
-  
-
   body
 }  
 
