@@ -69,5 +69,5 @@ Eaxample uses of citation:
 4. @Peters2000[p. 45]
  
 // Bibliography section
-#set par(first-line-indent: 0mm, hanging-indent: 8mm) // format tweak
-#bibliography("./references/refs.bib", style: "./references/abnt.csl")
+#set par(first-line-indent: 0mm, hanging-indent: 8mm, leading: 0.6em) // format tweak
+#bibliography("./references/refs.bib", title: "Referências", style: "./references/abnt-ufrgs.csl")

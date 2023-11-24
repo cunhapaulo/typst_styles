@@ -39,14 +39,21 @@
   let title_fontsize         = 1.75em   
   let abstract_fontsize     = 9pt
 
-  let body_fontsize         = 10pt   
+  let body_fontsize         = 11pt   
   let body_firstlineindent  = 10mm
   let body_interlinespace   = 0.6em
   let body_paragraphspacing = body_interlinespace
   let body_hyphenate        = true
   let body_fonttype         = "Palatino Linotype"  // "TeX Gyre Pagella" //"Linux Libertine"
                             // "STIX Two Text", "TeX Gyre Pagella", "Liberation Serif", "Fira Sans", "Libre Baskerville", "New Computer Modern", "TeX Gyre Termes", "Atkinson Hyperlegible", "STIX Two Text", "Linux Libertine", "Inria Serif", "Source Sans Pro", "Palatino", "Palatino Linotype"
+
+// ---------------------------------------------------------------
+//  Lists Configurations
+// ---------------------------------------------------------------
   
+  set enum(indent: 6pt, body-indent: 6pt, numbering: "1.a.i.")
+  set list( body-indent: 6pt)
+                            
 //==========================================================================
 // Set the document's basic properties.
 //==========================================================================

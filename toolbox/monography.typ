@@ -65,8 +65,8 @@
 //  Lists Configurations
 // ---------------------------------------------------------------
   
-  set enum(indent: 20pt, body-indent: 6pt, numbering: "(a)")
-  set list(indent: 20pt, body-indent: 6pt, marker: ">")
+  set enum(indent: 20pt, body-indent: 6pt, numbering: "1.a.i.")
+  set list(indent: 20pt, body-indent: 6pt,)
 
   
 // ---------------------------------------------------------------
